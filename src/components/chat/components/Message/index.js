@@ -1,4 +1,5 @@
 import React from 'react';
+import {Avatar, Grid} from "@material-ui/core";
 
 function Message({message}) {
 
@@ -11,13 +12,27 @@ function Message({message}) {
     return (
         isSentByCurrentUser
             ? (
-                <>
-                  1
-                </>
+                <Grid container>
+                    <Grid>
+                        <span>You</span>
+                        <div>{message.messageText}</div>
+                    </Grid>
+                    <Grid>
+                        <Avatar alt="Remy Sharp" src="../images/avatar.jpeg"/>
+                        <span>{message.createAt}</span>
+                    </Grid>
+                </Grid>
             ): (
-                <>
-                2
-                </>
+                <Grid container>
+                    <Grid>
+                        <span>{message.name}</span>
+                        <div>{message.messageText}</div>
+                    </Grid>
+                    <Grid>
+                        <Avatar alt="Remy Sharp" src="../images/avatar.jpeg"/>
+                        <span>{message.createAt}</span>
+                    </Grid>
+                </Grid>
             )
     );
 }

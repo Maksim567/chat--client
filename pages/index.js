@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         background: 'red',
     },
     drawer: {
-
+        background: 'blue',
         [theme.breakpoints.up('sm')]: {
             width: drawerWidth,
             flexShrink: 0,
@@ -34,7 +34,6 @@ const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
-        background: 'blue',
             width: drawerWidth,
 
     },
@@ -48,7 +47,7 @@ function ResponsiveDrawer(props) {
     const { window } = props;
     const classes = useStyles();
     const theme = useTheme();
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [mobileOpen, setMobileOpen] = React.useState(true);
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);

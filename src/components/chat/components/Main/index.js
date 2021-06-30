@@ -50,46 +50,53 @@ function Main() {
                 <Grid xs={12} sm={5} lg={3}>
                     <UsersContainer/>
                 </Grid>
-                <Grid xs={12} sm={7} lg={9} style={{background: 'blue'}} className={classes.drawer}>
-                    <ChatField />
-
+                <Grid xs={12} sm={7} lg={9}>
+                    <ChatField/>
                 </Grid>
-                <Grid xs={12}>
-                    <Hidden smUp implementation="css">
-                        <Drawer
-                            open={mobileOpen}
-                            onClose={handleDrawerToggle}
-                            classes={{
-                                paper: classes.drawerPaper,
-                            }}
-                            ModalProps={{
-                                keepMounted: true, // Better open performance on mobile.
-                            }}
-                        >
-                            <IconButton
-                                onClick={handleDrawerToggle}
-                                className={classes.menuButton}
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <ChatField/>
-                        </Drawer>
-                    </Hidden>
-                </Grid>
-
             </Grid>
+
+            {/*
+
+            <Grid xs={12}>
+    <Hidden smUp implementation="css">
+        <Drawer
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            classes={{
+                paper: classes.drawerPaper,
+            }}
+            ModalProps={{
+                keepMounted: true, // Better open performance on mobile.
+            }}
+        >
             <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
                 onClick={handleDrawerToggle}
                 className={classes.menuButton}
             >
                 <MenuIcon />
             </IconButton>
+            <ChatField/>
+        </Drawer>
+    </Hidden>
+</Grid>
+
+Grid<IconButton
+    color="inherit"
+    aria-label="open drawer"
+    edge="start"
+    onClick={handleDrawerToggle}
+    className={classes.menuButton}
+>
+    <MenuIcon />
+</IconButton>
+
+
+            */}
+
         </>
     );
 }
 
 export default Main;
+
 
